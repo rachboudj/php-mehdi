@@ -78,6 +78,9 @@ echo $chaine;
 $ages2 = explode('-', $chaine);
 debug($ages2);
 
+$ages['paul'] = 33;
+debug($ages);
+
 
 
 ?>

@@ -89,10 +89,10 @@ foreach($ages as $key => $valeur){
 echo "<br>";
 $liste = "<ul>";
 foreach($ages as $key => $valeur){
-    echo "<li>$valeur</li>";
+    $liste .= "<li>$valeur</li>";
 }
-$liste = "</ul>";
-
+$liste .= "</ul>";
+echo $liste;
 
 ?>
 </main>

@@ -65,11 +65,16 @@ debug($fruits);
 echo "La couleur de la pomme est " . $fruits['Pomme'] . ".";
 echo 'La longueur du tableau $fruits est de : ' . sizeof($fruits);
 
+echo "<br>";
+echo "<br>";
 $ages = [
     'Michel' => 34,
     'Lucie' => 22,
     'Bernard' => 77
-]
+];
+
+$chaine = implode('-', $ages);
+echo $chaine
 
 
 

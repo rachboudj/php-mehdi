@@ -5,29 +5,36 @@ include('includes/fonctions.php');
 
 <main>
 <?php 
+echo "<hr>";
+echo "<h2>Tableau</h2>";
 $tableau = array();
 $tableau = [];
 $tableau = [true, 45, 'Terre', [45, 46, 47]];
 
 debug($tableau);
 
+
+// Pour ajouter une ligne dans un tableau
 $tableau[] = 'Janvier';
 array_push($tableau, 'Voiture');
 array_push($tableau, 'Voiture 2', 'Tortue Ninja');
 
-debug($tableau[2]);
+debug($tableau[2]); // Afficher 2ème index du tableau
 
+// Compter le nb d'index dans le tableau
 echo count($tableau);
 
 echo "<br />";
 $notes = [12, 5, 16, 7];
 // Afficher la moyenne des notes 
+echo "<h4>Calculer la moyenne d'un tableau</h4>";
 $sommesNotes = $notes[0] + $notes[1] + $notes[2] + $notes[3];
 $moyennesNotes = $sommesNotes / count($notes);
 
 echo $moyennesNotes;
 
 // Pour merger un tableau à un autre 
+echo "<h4>Merger un tableau à un autre</h4>";
 $tab2 = array_merge($tableau, $notes);
 
 debug($tab2);
@@ -35,6 +42,7 @@ debug($tab2);
 echo "<br>";
 echo "<br>";
 // Boucles qui parcoure tout le tableau notes
+echo "<h4>Boucle qui parcoure un tableau (ici le tableau de note)</h4>";
 for($k=0; $k < count($notes); $k++) {
     echo $notes[$k] . "<br>";
 }
@@ -42,6 +50,7 @@ for($k=0; $k < count($notes); $k++) {
 // Boucles qui calcule la moyenne
 echo "<br>";
 echo "<br>";
+echo "<h4>Boucle qui calcule la moyenne</h4>";
 $sommesNotes = 0;
 for ($j = 0; $j < count($notes); $j++) {
     $sommesNotes += $notes[$j];
@@ -51,6 +60,7 @@ echo $moyennesNotes;
 
 echo "<br>";
 echo "<br>";
+echo "<h4>Afficher toutes les notes (ressemble à vuejs)</h4>";
 foreach($notes as $note) {
     echo $note . '<br>';
 }
@@ -58,6 +68,8 @@ foreach($notes as $note) {
 // ---------- Tableau associatif ----------
 echo "<br>";
 echo "<br>";
+echo "<hr>";
+echo "<h2>Tableau Associatif</h2>";
 
 $fruits = ['Bananes' => 'jaune', 'Pomme' => 'rouge', 'Kiwi' => 'vert'];
 debug($fruits);
@@ -99,16 +111,20 @@ echo "<br>";
 $planetes = ['Jupiter', 'Mars', 'Terre', 'Pluton'];
 debug($planetes);
 
+
 asort($planetes);
 arsort($ages);
 
+echo "<h4>Trie croissant des valeur</h4>";
 debug($planetes);
+echo "<h4>Trie décroissant des valeur</h4>";
 debug($ages);
 
 arsort($planetes);
 krsort($ages);
 
-debug($planetes);
+echo "<h4>Trie décroissant des clés</h4>";
+debug($ages);
 
 $tab = [
     'voiture' => 'Ford',
@@ -119,7 +135,6 @@ $tab = [
 debug($tab);
 
 debug($tab['nombre'][0]);
-echo $voitures;
 
 
 

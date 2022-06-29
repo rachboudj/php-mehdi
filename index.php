@@ -37,6 +37,15 @@ for($k=0; $k < count($notes); $k++) {
     echo $notes[$k] . "<br>";
 }
 
+echo "<br>";
+$sommesNotes = 0;
+for ($j = 0; $j < count($notes); $j++) {
+    $sommesNotes += $notes[$j];
+}
+
+$moyennesNotes = $sommesNotes / count($notes);
+echo $moyennesNotes;
+
 ?>
 </main>
 

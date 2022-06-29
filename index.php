@@ -86,6 +86,11 @@ foreach($ages as $key => $valeur){
     echo $key . ' a ' . $valeur . ' ans<br>';
 }
 
+$liste = "<ul>";
+
+
+$liste = "</ul>";
+
 
 ?>
 </main>

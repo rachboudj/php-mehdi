@@ -32,19 +32,28 @@ $tab2 = array_merge($tableau, $notes);
 
 debug($tab2);
 
+echo "<br>";
+echo "<br>";
 // Boucles qui parcoure tout le tableau notes
 for($k=0; $k < count($notes); $k++) {
     echo $notes[$k] . "<br>";
 }
 
+// Boucles qui calcule la moyenne
+echo "<br>";
 echo "<br>";
 $sommesNotes = 0;
 for ($j = 0; $j < count($notes); $j++) {
     $sommesNotes += $notes[$j];
 }
-
 $moyennesNotes = $sommesNotes / count($notes);
 echo $moyennesNotes;
+
+echo "<br>";
+echo "<br>";
+foreach($notes as $note) {
+    echo $note . '<br>';
+}
 
 ?>
 </main>

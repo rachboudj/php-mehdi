@@ -25,7 +25,11 @@ $notes = [12, 5, 16, 7];
 $sommesNotes = $notes[0] + $notes[1] + $notes[2] + $notes[3];
 $moyennesNotes = $sommesNotes / count($notes);
 
-echo $moyennesNotes
+echo $moyennesNotes;
+
+$tab2 = array_merge($tableau, $notes);
+
+debug($tab2);
 
 ?>
 </main>

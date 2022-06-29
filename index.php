@@ -78,9 +78,13 @@ echo $chaine;
 $ages2 = explode('-', $chaine);
 debug($ages2);
 
-$ages['paul'] = 33;
+$ages['Paul'] = 33;
+$ages['Lucie'] = 02;
 debug($ages);
 
+foreach($ages as $key => $valeur){
+    echo $key . ' a ' . $valeur . ' ans<br>';
+}
 
 
 ?>

@@ -94,6 +94,24 @@ foreach($ages as $key => $valeur){
 $liste .= "</ul>";
 echo $liste;
 
+echo "<br>";
+echo "<br>";
+$planetes = ['Jupiter', 'Mars', 'Terre', 'Pluton'];
+debug($planetes);
+
+asort($planetes);
+arsort($ages);
+
+debug($planetes);
+debug($ages);
+
+arsort($planetes);
+krsort($ages);
+
+debug($planetes);
+
+
+
 ?>
 </main>
 

@@ -9,7 +9,15 @@ $tableau = array();
 $tableau = [];
 $tableau = [true, 45, 'Terre', [45, 46, 47]];
 
-print_r($tableau)
+debug($tableau);
+
+$tableau[] = 'Janvier';
+array_push($tableau, 'Voiture');
+array_push($tableau, 'Voiture 2', 'Tortue Ninja');
+
+debug($tableau[2]);
+debug($tableau[2]);
+
 ?>
 </main>
 

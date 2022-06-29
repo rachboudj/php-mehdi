@@ -55,6 +55,24 @@ foreach($notes as $note) {
     echo $note . '<br>';
 }
 
+// ---------- Tableau associatif ----------
+echo "<br>";
+echo "<br>";
+
+$fruits = ['Bananes' => 'jaune', 'Pomme' => 'rouge', 'Kiwi' => 'vert'];
+debug($fruits);
+
+echo "La couleur de la pomme est " . $fruits['Pomme'] . ".";
+echo 'La longueur du tableau $fruits est de : ' . sizeof($fruits);
+
+$ages = [
+    'Michel' => 34,
+    'Lucie' => 22,
+    'Bernard' => 77
+]
+
+
+
 ?>
 </main>
 

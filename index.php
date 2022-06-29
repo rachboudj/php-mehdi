@@ -74,7 +74,9 @@ $ages = [
 ];
 
 $chaine = implode('-', $ages);
-echo $chaine
+echo $chaine;
+$ages2 = explode('-', $chaine);
+debug($ages2);
 
 
 

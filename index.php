@@ -27,9 +27,15 @@ $moyennesNotes = $sommesNotes / count($notes);
 
 echo $moyennesNotes;
 
+// Pour merger un tableau à un autre 
 $tab2 = array_merge($tableau, $notes);
 
 debug($tab2);
+
+// Boucles qui parcoure tout le tableau notes
+for($k=0; $k < count($notes); $k++) {
+    echo $notes[$k] . "<br>";
+}
 
 ?>
 </main>

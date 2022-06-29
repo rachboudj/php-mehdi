@@ -86,10 +86,41 @@ foreach($ages as $key => $valeur){
     echo $key . ' a ' . $valeur . ' ans<br>';
 }
 
+echo "<br>";
 $liste = "<ul>";
+foreach($ages as $key => $valeur){
+    $liste .= "<li>$valeur</li>";
+}
+$liste .= "</ul>";
+echo $liste;
 
+echo "<br>";
+echo "<br>";
+$planetes = ['Jupiter', 'Mars', 'Terre', 'Pluton'];
+debug($planetes);
 
-$liste = "</ul>";
+asort($planetes);
+arsort($ages);
+
+debug($planetes);
+debug($ages);
+
+arsort($planetes);
+krsort($ages);
+
+debug($planetes);
+
+$tab = [
+    'voiture' => 'Ford',
+    'nombre' => [1, 2, 3, 4],
+    'planete' => ['mars', 'terre']
+];
+
+debug($tab);
+
+debug($tab['nombre'][0]);
+echo $voitures;
+
 
 
 ?>

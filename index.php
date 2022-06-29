@@ -110,6 +110,17 @@ krsort($ages);
 
 debug($planetes);
 
+$tab = [
+    'voiture' => 'Ford',
+    'nombre' => [1, 2, 3, 4],
+    'planete' => ['mars', 'terre']
+];
+
+debug($tab);
+
+debug($tab['nombre'][0]);
+echo $voitures;
+
 
 
 ?>

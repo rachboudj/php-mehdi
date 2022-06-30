@@ -136,7 +136,18 @@ debug($tab);
 
 debug($tab['nombre'][0]);
 
+$tab = [];
+$tab[] = ['A','B','C'];
+$tab[] = ['S','U','V'];
+$tab[] = ['O','U','E','I'];
 
+// Écrire le mot ESCCI
+debug($tab);
+debug($tab[2][2]);
+debug($tab[1][0]);
+debug($tab[0][2]);
+debug($tab[0][2]);
+debug($tab[2][3]);
 
 ?>
 </main>

@@ -1,3 +1,7 @@
+<?php 
+include('includes/fonctions.php');
+?>
+
 /* 
 - Créer un tableau php avec ses nombres : 
 27, 15, 34, 379, 248, 5643, 81, 211, 999, 142,, 300, 572
@@ -31,5 +35,22 @@ foreach($pairImpairs as $pairImpair) {
 } 
 $liste .= "</ul>";
 
+/* 
+Parcourir le tableau user et pour toutes les entrées vide, mettre 
+"Aucune Information"
+*/
+
+$user = [
+    "firstname" => "Mike",
+    "lastname" => "Olganh",
+    "pseudo" => "",
+    "age" => 34, 
+    "food" => "",
+    "sport" => "",
+];
+
+echo "<br>";
+echo "<br>";
+isEmpty($user);
 
 ?>

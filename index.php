@@ -143,11 +143,9 @@ $tab[] = ['O','U','E','I'];
 
 // Écrire le mot ESCCI
 debug($tab);
-debug($tab[2][2]);
-debug($tab[1][0]);
-debug($tab[0][2]);
-debug($tab[0][2]);
-debug($tab[2][3]);
+debug($tab[2][2] . $tab[1][0] . $tab[0][2] . $tab[0][2] . $tab[2][3]);
+
+
 
 ?>
 </main>

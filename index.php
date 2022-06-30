@@ -119,11 +119,38 @@ $tab = [
 debug($tab);
 
 debug($tab['nombre'][0]);
-echo $voitures;
 
-
-
+$produits = [
+    ['nom' => 'chaussette', 'prix' => 10],
+    ['nom' => 'velo', 'prix' => 50],
+    ['nom' => 'carotte', 'prix' => 2],
+    ['nom' => 'boulon', 'prix' => 7],
+]
 ?>
+<!-- 
+    Traverser le tableau produits (foreach) pour afficher le nom du produit 
+    et son prix : 
+    'nom du produit' : 'prix' €
+    'nom du produit' : 'prix' €
+    ...
+-->
+
+<div>
+    <ul>
+        <?php 
+        foreach($produits as $produit) {
+        ?>
+        <li>
+            <?php /* echo $produit['nom'] . $produit['prix']*/?>
+            <?= $produit['nom']?> : <?= $produit['prix']?> €
+        </li>
+        <?php } ?>
+        
+        
+        
+    </ul>
+</div>
+
 </main>
 
 <?php

@@ -141,7 +141,7 @@ $produits = [
         foreach($produits as $produit) {
         ?>
         <li>
-            <?php /* echo $produit['nom'] . $produit['prix']*/?>
+            <?php /* echo $produit['nom'] . ' : ' $produit['prix'] . '€';*/?>
             <?= $produit['nom']?> : <?= $produit['prix']?> €
         </li>
         <?php } ?>

@@ -53,4 +53,23 @@ echo "<br>";
 echo "<br>";
 isEmpty($user);
 
+/* 
+Trouver le nb maximum de ce tableau. 
+*/
+echo "<br>";
+echo "<br>";
+$nombres = [4, 15, 2, 145, 42, 5, 78, 12];
+$index = $nombres[0];
+
+foreach($nombres as $nombre) {
+    // echo "$nombre <br>";
+    if ($nombre > $index) {
+        $index = $nombre;
+    } 
+    debug($nombre);
+}
+
+debug("Le nombre maximum est : $index");
+
+
 ?>

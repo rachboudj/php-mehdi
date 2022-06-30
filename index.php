@@ -135,7 +135,6 @@ $tab = [
 debug($tab);
 
 debug($tab['nombre'][0]);
-<<<<<<< HEAD
 
 $tab = [];
 $tab[] = ['A','B','C'];
@@ -147,8 +146,6 @@ debug($tab);
 debug($tab[2][2] . $tab[1][0] . $tab[0][2] . $tab[0][2] . $tab[2][3]);
 
 
-=======
->>>>>>> develop
 
 $produits = [
     ['nom' => 'chaussette', 'prix' => 10],

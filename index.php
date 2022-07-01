@@ -151,6 +151,26 @@ $produits = [
     </ul>
 </div>
 
+<?php 
+
+$peoples = [
+    [
+        'nom' => 'Jean',
+        'prenom' => 'Momo',
+        'email' => 'momo@gmail.com'
+    ],
+    [
+        'nom' => 'Dupond',
+        'prenom' => 'Lucie',
+        'email' => 'dupond@gmail.com'
+    ]
+    ];
+
+debug($peoples);
+echo "Le nom de Lucie est " . $peoples[1]['nom'];
+
+?>
+
 </main>
 
 <?php

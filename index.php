@@ -186,10 +186,19 @@ $json_peoples = '[{
 }]';
 
 // debug($json_peoples);
+// $peoples_array_php = json_decode($json_peoples, true);
+// debug($peoples_array_php);
+
 $peoples_array_php = json_decode($json_peoples, true);
 debug($peoples_array_php);
+echo "Le nom de Anny est " . $peoples_array_php[1]['nom'];
 
 ?>
+
+<div class="json">
+    <img src="<?php echo $peoples_array_php[1]['image']; ?>" alt="">
+    <p><?php echo "Le nom de Anny est " . $peoples_array_php[1]['nom']; ?></p>
+</div>
 
 </main>
 

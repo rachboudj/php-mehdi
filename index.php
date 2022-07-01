@@ -167,7 +167,9 @@ $peoples = [
     ];
 
 debug($peoples);
-echo "Le nom de Lucie est " . $peoples[1]['nom'];
+// echo "Le nom de Lucie est " . $peoples[1]['nom'];
+$json_peoples = json_encode($peoples);
+debug($json_peoples);
 
 ?>
 

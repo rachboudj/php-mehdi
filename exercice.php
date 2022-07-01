@@ -71,5 +71,8 @@ foreach($nombres as $nombre) {
 
 debug("Le nombre maximum est : $index");
 
+$users = file_get_contents("./data/users.json");
+
+debug($users);
 
 ?>

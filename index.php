@@ -153,23 +153,37 @@ $produits = [
 
 <?php 
 
-$peoples = [
-    [
-        'nom' => 'Jean',
-        'prenom' => 'Momo',
-        'email' => 'momo@gmail.com'
-    ],
-    [
-        'nom' => 'Dupond',
-        'prenom' => 'Lucie',
-        'email' => 'dupond@gmail.com'
-    ]
-    ];
+// $peoples = [
+//     [
+//         'nom' => 'Jean',
+//         'prenom' => 'Momo',
+//         'email' => 'momo@gmail.com'
+//     ],
+//     [
+//         'nom' => 'Dupond',
+//         'prenom' => 'Lucie',
+//         'email' => 'dupond@gmail.com'
+//     ]
+//     ];
 
-debug($peoples);
+// debug($peoples);
 // echo "Le nom de Lucie est " . $peoples[1]['nom'];
-$json_peoples = json_encode($peoples);
-debug($json_peoples);
+// $json_peoples = json_encode($peoples);
+// debug($json_peoples);
+
+$json_peoples = '[{
+    "nom" : "Durand",
+    "prenom" : "Marc",
+    "age" : 23
+}, {
+    "nom" : "Vilko",
+    "prenom" : "Anny",
+    "age" : 45
+}]';
+
+// debug($json_peoples);
+$peoples_array_php = json_decode($json_peoples, true);
+debug($peoples_array_php);
 
 ?>
 

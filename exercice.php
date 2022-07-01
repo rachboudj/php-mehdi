@@ -73,12 +73,24 @@ debug("Le nombre maximum est : $index");
 
 $users = file_get_contents("./data/users.json");
 $users_array_phps = json_decode($users, true);
-// foreach($users_array_phps as $users_array_php) {
-//     echo $users_array_phps;
-// }
-// debug($users_array_php);
 
 debug($users_array_phps);
+foreach($users_array_phps['results'] as $users_array_php) {
+    // echo $users_array_php['name']['first'];
+    ?>
+    <div class="container-card">
+    <div class="card">
+    <img src="<?php echo $users_array_php['picture']['thumbnail'] ?>" alt="">
+    <h3><?php echo $users_array_php['name']['first'] ?> <?php echo $users_array_php['name']['last'] ?></h3>
+    <h4><?php echo $users_array_php['email'] ?></h4>
+    <p class="datenaissance"><?php echo $users_array_php['registered']['date'] ?></p>
+    <p class="adresse"><?php echo $users_array_php['location']['street']['number'] ?>, <?php echo $users_array_php['location']['street']['name'] ?></p>
+    <p class="téléphone"><?php echo $users_array_php['phone'] ?></p>
+    </div>
+</div>
+<?php
+}
+// debug($users_array_php['email']);
 
 // debug($users_array_php['results'][$key]['gender']);
 // echo "Genre : " . $users_array_php['results'][0]['gender'];
@@ -90,13 +102,4 @@ debug($users_array_phps);
 // de naissance, adresse, téléphone
 
 ?>
-<div class="container-card">
-    <div class="card">
-    <img src="" alt="">
-    <h3>Nom : <?php echo $users_array_phps['results'][0]['name']['last']; ?>; Prénom : <?php echo $users_array_phps['results'][0]['name']['first'] ?></h3>
-    <h4>Email : <?php echo $users_array_phps['results'][0]['email'] ?></h4>
-    <p class="naissance"><?php echo $users_array_phps['results'][0]['registered']['date'] ?></p>
-    <p class="adresse"><?php echo $users_array_phps['results'][0]['location']['street']['number'] ?>, <?php echo $users_array_phps['results'][0]['location']['street']['name'] ?></p>
-    <p class="telephone"><?php echo $users_array_phps['results'][0]['phone'] ?></p>
-    </div>
-</div>
+

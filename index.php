@@ -174,11 +174,15 @@ $produits = [
 $json_peoples = '[{
     "nom" : "Durand",
     "prenom" : "Marc",
-    "age" : 23
+    "age" : 23,
+    "couleur" : ["rouge", "vert", "jaune"],
+    "image" : "https://ximg.es/64x64/000/fff"
 }, {
     "nom" : "Vilko",
     "prenom" : "Anny",
-    "age" : 45
+    "age" : 45,
+    "couleur" : ["marron", "noir", "violet"],
+    "image" : "https://ximg.es/64x64/000/fff"
 }]';
 
 // debug($json_peoples);

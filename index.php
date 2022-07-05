@@ -178,6 +178,55 @@ $produits = [
     </ul>
 </div>
 
+<?php 
+
+// $peoples = [
+//     [
+//         'nom' => 'Jean',
+//         'prenom' => 'Momo',
+//         'email' => 'momo@gmail.com'
+//     ],
+//     [
+//         'nom' => 'Dupond',
+//         'prenom' => 'Lucie',
+//         'email' => 'dupond@gmail.com'
+//     ]
+//     ];
+
+// debug($peoples);
+// echo "Le nom de Lucie est " . $peoples[1]['nom'];
+// $json_peoples = json_encode($peoples);
+// debug($json_peoples);
+
+$json_peoples = '[{
+    "nom" : "Durand",
+    "prenom" : "Marc",
+    "age" : 23,
+    "couleur" : ["rouge", "vert", "jaune"],
+    "image" : "https://ximg.es/64x64/000/fff"
+}, {
+    "nom" : "Vilko",
+    "prenom" : "Anny",
+    "age" : 45,
+    "couleur" : ["marron", "noir", "violet"],
+    "image" : "https://ximg.es/64x64/000/fff"
+}]';
+
+// debug($json_peoples);
+// $peoples_array_php = json_decode($json_peoples, true);
+// debug($peoples_array_php);
+
+$peoples_array_php = json_decode($json_peoples, true);
+debug($peoples_array_php);
+echo "Le nom de Anny est " . $peoples_array_php[1]['nom'];
+
+?>
+
+<div class="json">
+    <img src="<?php echo $peoples_array_php[1]['image']; ?>" alt="">
+    <p><?php echo "Le nom de Anny est " . $peoples_array_php[1]['nom']; ?></p>
+</div>
+
 </main>
 
 <?php

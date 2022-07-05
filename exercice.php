@@ -133,6 +133,7 @@ $users_array_phps = json_decode($users, true);
     }
 </style>
 
+<?php 
 /*
 Travaller avec le fichier json persons.json dans le dossier Travaux
     Afficher le(a) deuxieme ami(e) de Raymond Jimenez dans un titre html <h3>
@@ -151,3 +152,33 @@ Travaller avec le fichier json persons.json dans le dossier Travaux
         Chaque personne sera séparé d'une ligne horizontale html <hr>
 Vous trouverez une capture du resultat attendu.
 */
+
+
+$persons = json_decode(file_get_contents("./data/persons.json"), true);
+debug($persons);
+
+?>
+
+<h3><?= $persons[2]['friends'][1]['name'] ?></h3>
+<hr>
+<p>La couleur des yeux de Ball Shaffer est : <strong><?=$persons[1]['eyeColor'] ?></strong></p>
+<hr>
+<article>
+    <?php foreach($persons as $key => $value) { ?>
+    <img src="<?=$value["picture"]?>" alt="">
+    <p>Nom : <?=$value["name"] ?></p>
+    <p>Âge : <?=$value["age"] ?></p>
+    <p>Couleur des yeux : <?=$value["eyeColor"] ?></p>
+    <p>Email : <?=$value["email"] ?></p>
+    <p>Fruit favori : <?=$value["favoriteFruit"] ?></p>
+    <?php 
+        if ($value['isActive']) {
+            echo '<p>ACTIF</p>';
+        }
+
+    $tags = implode(",", $value['tags']);
+    ?>
+    <p>Tags : <?php echo $tags ?> </p>
+    <hr>
+    <?php } ?>
+</article>
